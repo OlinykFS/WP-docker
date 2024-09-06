@@ -8,6 +8,8 @@ services:
       - "${WORDPRESS_PORT}:80"
     volumes:
       - ./wordpress:/var/www/html
+      - ./theme:/var/www/html/wp-content/themes/
+      - ./plugin:/var/www/html/wp-content/plugins/
     environment:
       WORDPRESS_DB_HOST: ${WORDPRESS_DB_HOST}
       WORDPRESS_DB_NAME: ${WORDPRESS_DB_NAME}
